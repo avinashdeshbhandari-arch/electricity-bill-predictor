@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Prediction Result</h1>
+
+    <h2>Electricity Consumption</h2>
+    <p>{{ units }} kWh</p>
+
+    <h2>Estimated Electricity Bill</h2>
+
+    <div class="result">
+        ₹ {{ prediction }}
+    </div>
+
+    <p>Your estimated monthly electricity bill</p>
+
+    <a href="/" class="back-button">
+        Predict Again
+    </a>
+
+</div>
+
+</body>
+</html>
