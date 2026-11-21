@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Predictor</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Electricity Bill Predictor</h1>
+
+    <p>Predict your monthly electricity bill
+       using Machine Learning</p>
+
+    <form action="/predict" method="POST">
+
+        <label>Electricity Units Consumed (kWh)</label>
+        <input type="number" name="units"
+               min="0" step="any" required>
+
+        <label>Number of People</label>
+        <input type="number" name="people"
+               min="1" required>
+
+        <label>Number of Appliances</label>
+        <input type="number" name="appliances"
+               min="0" required>
+
+        <label>Average Daily Usage Hours</label>
+        <input type="number" name="hours"
+               min="0" max="24" step="any" required>
+
+        <button type="submit">Predict Electricity Bill</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
